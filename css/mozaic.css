@@ -157,11 +157,11 @@ table {
 
 /* ---------------mozaic 404 style---------------------- */
 
-#dotty {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+/*#dotty {*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
+/*}*/
 
 body {
     font-family: Montserrat, "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;

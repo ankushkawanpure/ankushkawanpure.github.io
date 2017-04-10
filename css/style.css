@@ -1,0 +1,32 @@
+body {
+    height : 100%;
+}
+
+#container {
+    /*background-color: #fafafa;*/
+    min-width: 100%;
+    padding-top: 50px;
+}
+
+#education {
+    background-color: #fafafa;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 50px;
+}
+
+
+#homeScreen {
+    background-color: #fafafa;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 50px;
+}
+
+
+#work {
+    background-color: #fafafa;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 50px;
+}

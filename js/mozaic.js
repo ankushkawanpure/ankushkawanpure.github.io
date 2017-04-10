@@ -7,6 +7,8 @@
 $(window).load(function() {
     var w = dotty.width = window.innerWidth,
         h = dotty.height = window.innerHeight,
+    // var w = dotty.width = 200,
+    //     h = dotty.height = 200,
         sum = w + h,
         ctx = dotty.getContext('2d'),
 
