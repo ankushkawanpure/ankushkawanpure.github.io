@@ -320,6 +320,16 @@ button:hover,
 
 .img-responsive { width: 100%; }
 
+.profile-pic {
+    font-weight: 100;
+    color: #fff;
+    padding-top: 10px;
+    /*margin: 10px;*/
+    font-size: 18px;
+}
+
+.img-responsive-profile { width: 80%; }
+
 .breadcrumb-holder {
     padding: 12px 17px 12px 0;
     background: #272727;

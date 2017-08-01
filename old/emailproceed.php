@@ -1,4 +1,4 @@
-<?php 
+    <?php
 require './phpmailer/PHPMailerAutoload.php';
 
 if(isset($_POST['submit'])) {
