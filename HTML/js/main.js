@@ -32,7 +32,7 @@ function submitForm() {
     var message = $("#message").val();
     $.ajax({
         type: "POST",
-        url: "php/contact.php",
+        url: "https://people.rit.edu/aak3988/maile/emailproceed.php",
         data: "name=" + name + "&email=" + email + "&msg_subject=" +
             msg_subject + "&message=" + message,
         success: function(text) {
@@ -42,7 +42,16 @@ function submitForm() {
                 formError();
                 submitMSG(false, text);
             }
-        }
+        },
+        xhrFields: {
+            // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
+            // This can be used to set the 'withCredentials' property.
+            // Set the value to 'true' if you'd like to pass cookies to the server.
+            // If this is enabled, your server must respond with the header
+            // 'Access-Control-Allow-Credentials: true'.
+            withCredentials: false
+        },
+
     });
 }
 function formSuccess() {
@@ -102,11 +111,11 @@ $(document).ready(function() {
     $('.scroll-link').on('click', function(event){
         event.preventDefault();
         var sectionID = $(this).attr("data-id");
-        scrollToID('#' + sectionID, 750);
+        scrollToID('#' + sectionID, 1500);
     });
     $('.scroll-top').on('click', function(event) {
         event.preventDefault();
-        $('html, body').animate({scrollTop:0}, 1200);       
+        $('html, body').stop().animate({scrollTop:0}, 1200,'easeInOutExpo');
     });
 });
 
@@ -114,8 +123,17 @@ $(document).ready(function() {
 function scrollToID(id, speed){
     var offSet = 69;
     var targetOffset = $(id).offset().top - offSet;
-    $('html,body').animate({scrollTop:targetOffset}, speed);
+    $('html,body').animate({scrollTop:targetOffset}, speed, 'easeInOutExpo');
 }
+
+// $('a.page-scroll').bind('click', function(event) {
+//     var $anchor = $(this);
+//     $('html, body').stop().animate({
+//         scrollTop: $($anchor.attr('href')).offset().top
+//     }, 1500, 'easeInOutExpo');
+//     event.preventDefault();
+// });
+
 
 /* ---- animations ---- */
 if (typeof sr == 'undefined') {
